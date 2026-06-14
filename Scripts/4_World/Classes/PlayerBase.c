@@ -13,34 +13,141 @@ modded class PlayerBase
     float m_StichedHealInterval = 300.0;
     float chanceForBulletWound;
     float chanceForDeepWound;
+
     int m_playerDeepWoundsCount;
+    int m_playerDeepWoundsCount_Left_Leg;
+    int m_playerDeepWoundsCount_Left_Arm;
+    int m_playerDeepWoundsCount_Right_Leg;
+    int m_playerDeepWoundsCount_Right_Arm;
+
     int m_playerDeepWoundsBandagedCount;
+    int m_playerDeepWoundsBandagedCount_Left_Leg;
+    int m_playerDeepWoundsBandagedCount_Left_Arm;
+    int m_playerDeepWoundsBandagedCount_Right_Leg;
+    int m_playerDeepWoundsBandagedCount_Right_Arm;
+
     int m_playerDeepWoundsStichedCount;
+    int m_playerDeepWoundsStichedCount_Left_Leg;
+    int m_playerDeepWoundsStichedCount_Left_Arm;
+    int m_playerDeepWoundsStichedCount_Right_Leg;
+    int m_playerDeepWoundsStichedCount_Right_Arm;
+
     int m_playerBulletWoundsCount;
+    int m_playerBulletWoundsCount_Left_Leg;
+    int m_playerBulletWoundsCount_Left_Arm;
+    int m_playerBulletWoundsCount_Right_Leg;
+    int m_playerBulletWoundsCount_Right_Arm;
+
     int m_playerBulletWoundsBandagedCount;
+    int m_playerBulletWoundsBandagedCount_Left_Leg;
+    int m_playerBulletWoundsBandagedCount_Left_Arm;
+    int m_playerBulletWoundsBandagedCount_Right_Leg;
+    int m_playerBulletWoundsBandagedCount_Right_Arm;
+
     int m_playerBulletWoundsRemovedCount;
+    int m_playerBulletWoundsRemovedCount_Left_Leg;
+    int m_playerBulletWoundsRemovedCount_Left_Arm;
+    int m_playerBulletWoundsRemovedCount_Right_Leg;
+    int m_playerBulletWoundsRemovedCount_Right_Arm;
+
     int m_playerBulletWoundsStichedCount;
+    int m_playerBulletWoundsStichedCount_Left_Leg;
+    int m_playerBulletWoundsStichedCount_Left_Arm;
+    int m_playerBulletWoundsStichedCount_Right_Leg;
+    int m_playerBulletWoundsStichedCount_Right_Arm;
+
     BleedingSourcesManagerServer bleedingManagerDeepWound;
 
     override void Init()
     {
         super.Init(); //For the layout and edds
+
         m_playerDeepWoundsCount = 0; //DeepWound
+        m_playerDeepWoundsCount_Left_Leg = 0;
+        m_playerDeepWoundsCount_Left_Arm = 0;
+        m_playerDeepWoundsCount_Right_Leg = 0;
+        m_playerDeepWoundsCount_Right_Arm = 0;
+
         m_playerDeepWoundsBandagedCount = 0; //DeepWoundBandage
+        m_playerDeepWoundsBandagedCount_Left_Leg = 0;
+        m_playerDeepWoundsBandagedCount_Left_Arm = 0;
+        m_playerDeepWoundsBandagedCount_Right_Leg = 0;
+        m_playerDeepWoundsBandagedCount_Right_Arm = 0;
+
         m_playerDeepWoundsStichedCount = 0; //DeepWoundStiched
+        m_playerDeepWoundsStichedCount_Left_Leg = 0;
+        m_playerDeepWoundsStichedCount_Left_Arm = 0;
+        m_playerDeepWoundsStichedCount_Right_Leg = 0;
+        m_playerDeepWoundsStichedCount_Right_Arm = 0;
+
         m_playerBulletWoundsCount = 0; //BulletWound
+        m_playerBulletWoundsCount_Left_Leg = 0;
+        m_playerBulletWoundsCount_Left_Arm = 0;
+        m_playerBulletWoundsCount_Right_Leg = 0;
+        m_playerBulletWoundsCount_Right_Arm = 0;
+
         m_playerBulletWoundsBandagedCount = 0; //BulletWoundBandage
+        m_playerBulletWoundsBandagedCount_Left_Leg = 0;
+        m_playerBulletWoundsBandagedCount_Left_Arm = 0;
+        m_playerBulletWoundsBandagedCount_Right_Leg = 0;
+        m_playerBulletWoundsBandagedCount_Right_Arm = 0;
+
         m_playerBulletWoundsRemovedCount = 0; //BulletWoundRemoved
+        m_playerBulletWoundsRemovedCount_Left_Leg = 0;
+        m_playerBulletWoundsRemovedCount_Left_Arm = 0;
+        m_playerBulletWoundsRemovedCount_Right_Leg = 0;
+        m_playerBulletWoundsRemovedCount_Right_Arm = 0;
+
         m_playerBulletWoundsStichedCount = 0; //BulletWoundStiched
+        m_playerBulletWoundsStichedCount_Left_Leg = 0;
+        m_playerBulletWoundsStichedCount_Left_Arm = 0;
+        m_playerBulletWoundsStichedCount_Right_Leg = 0;
+        m_playerBulletWoundsStichedCount_Right_Arm = 0;
+
         chanceForBulletWound = 1.0;
         chanceForDeepWound = 1.0;
+
         RegisterNetSyncVariableInt("m_playerDeepWoundsCount");
+        RegisterNetSyncVariableInt("m_playerDeepWoundsCount_Left_Leg");
+        RegisterNetSyncVariableInt("m_playerDeepWoundsCount_Left_Arm");
+        RegisterNetSyncVariableInt("m_playerDeepWoundsCount_Right_Leg");
+        RegisterNetSyncVariableInt("m_playerDeepWoundsCount_Right_Arm");
+
         RegisterNetSyncVariableInt("m_playerDeepWoundsBandagedCount");
+        RegisterNetSyncVariableInt("m_playerDeepWoundsBandagedCount_Left_Leg");
+        RegisterNetSyncVariableInt("m_playerDeepWoundsBandagedCount_Left_Arm");
+        RegisterNetSyncVariableInt("m_playerDeepWoundsBandagedCount_Right_Leg");
+        RegisterNetSyncVariableInt("m_playerDeepWoundsBandagedCount_Right_Arm");
+
         RegisterNetSyncVariableInt("m_playerDeepWoundsStichedCount");
+        RegisterNetSyncVariableInt("m_playerDeepWoundsStichedCount_Left_Leg");
+        RegisterNetSyncVariableInt("m_playerDeepWoundsStichedCount_Left_Arm");
+        RegisterNetSyncVariableInt("m_playerDeepWoundsStichedCount_Right_Leg");
+        RegisterNetSyncVariableInt("m_playerDeepWoundsStichedCount_Right_Arm");
+
         RegisterNetSyncVariableInt("m_playerBulletWoundsCount");
+        RegisterNetSyncVariableInt("m_playerBulletWoundsCount_Left_Leg");
+        RegisterNetSyncVariableInt("m_playerBulletWoundsCount_Left_Arm");
+        RegisterNetSyncVariableInt("m_playerBulletWoundsCount_Right_Leg");
+        RegisterNetSyncVariableInt("m_playerBulletWoundsCount_Right_Arm");
+
         RegisterNetSyncVariableInt("m_playerBulletWoundsBandagedCount");
+        RegisterNetSyncVariableInt("m_playerBulletWoundsBandagedCount_Left_Leg");
+        RegisterNetSyncVariableInt("m_playerBulletWoundsBandagedCount_Left_Arm");
+        RegisterNetSyncVariableInt("m_playerBulletWoundsBandagedCount_Right_Leg");
+        RegisterNetSyncVariableInt("m_playerBulletWoundsBandagedCount_Right_Arm");
+
         RegisterNetSyncVariableInt("m_playerBulletWoundsRemovedCount");
+        RegisterNetSyncVariableInt("m_playerBulletWoundsRemovedCount_Left_Leg");
+        RegisterNetSyncVariableInt("m_playerBulletWoundsRemovedCount_Left_Arm");
+        RegisterNetSyncVariableInt("m_playerBulletWoundsRemovedCount_Right_Leg");
+        RegisterNetSyncVariableInt("m_playerBulletWoundsRemovedCount_Right_Arm");
+
         RegisterNetSyncVariableInt("m_playerBulletWoundsStichedCount");
+        RegisterNetSyncVariableInt("m_playerBulletWoundsStichedCount_Left_Leg");
+        RegisterNetSyncVariableInt("m_playerBulletWoundsStichedCount_Left_Arm");
+        RegisterNetSyncVariableInt("m_playerBulletWoundsStichedCount_Right_Leg");
+        RegisterNetSyncVariableInt("m_playerBulletWoundsStichedCount_Right_Arm");
     }
 
     override void OnStoreSave(ParamsWriteContext ctx)
@@ -468,10 +575,11 @@ modded class PlayerBase
     {
         super.EEHitBy(damageResult, damageType, source, component, dmgZone, ammo, modelPos, speedCoef);
 
-        float randomChance = Math.RandomFloat(0.0, 1.0);
-    
+        float randomChance = Math.RandomFloat(0.0, 1.0);  
+        
         if (damageType == DT_FIRE_ARM) 
         {
+
             if (GetGame().IsServer()) 
             {
                 float chanceForBulletWound = 0.0; // Default 70% chance
@@ -496,8 +604,6 @@ modded class PlayerBase
                 }
             }
         }
-    
-
 
         // Deep Wound from close combat (chance logic as before)
         //if (damageType == DT_CLOSE_COMBAT)
