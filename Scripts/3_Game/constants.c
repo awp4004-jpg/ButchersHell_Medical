@@ -1,0 +1,1 @@
+autoptr array<string> MELEE_AMMO_TYPES = {"MeleeSharpLight_1,MeleeSharpLight_2,MeleeSharpLight_3,MeleeSharpLight_4,MeleeSharpHeavy_1,MeleeSharpHeavy_2,MeleeSharpHeavy_3,MeleeSharpHeavy_4"};

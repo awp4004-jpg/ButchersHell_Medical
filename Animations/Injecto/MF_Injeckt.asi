@@ -1,0 +1,15 @@
+$animsetinstance {
+ #template "DZ/anims/workspaces/player/player_main/player_main.ast"
+ #nparents 1
+ #parent "DZ/anims/workspaces/player/player_main/player_main_1h.asi"
+ $animations {
+   "ActionContinuous.EatErc.In" "ButchersHell_Medical/Animations/Injecto/MF_Erect_iNJECT_IN.anm"
+   "ActionContinuous.EatErc.Loop" "ButchersHell_Medical/Animations/Injecto/MF_Erect_iNJECT_Loop.anm"
+   "ActionContinuous.EatErc.Out" "ButchersHell_Medical/Animations/Injecto/MF_Erect_iNJECT_Out.anm"
+   "ActionContinuous.EatCro.In" "ButchersHell_Medical/Animations/Injecto/MF_Cro_iNJECT_IN.anm"
+   "ActionContinuous.EatCro.Loop" "ButchersHell_Medical/Animations/Injecto/MF_Cro_iNJECT_Loop.anm"
+   "ActionContinuous.EatCro.Out" "ButchersHell_Medical/Animations/Injecto/MF_Cro_iNJECT_Out.anm"
+   "ActionContinuous.EatPne.In" "ButchersHell_Medical/Animations/Injecto/MF_Pne_iNJECT_IN.anm"
+   "ActionContinuous.EatPne.Loop" "ButchersHell_Medical/Animations/Injecto/MF_Pne_iNJECT_Loop.anm"
+   "ActionContinuous.EatPne.Out" "ButchersHell_Medical/Animations/Injecto/MF_Pne_iNJECT_Out.anm"
+ }
